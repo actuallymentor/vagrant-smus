@@ -2,6 +2,11 @@
 
 To start just git  clone and vagrant up.
 
+Useful info:
+
+- The vagrant server uses ubuntu 15.04
+- The vagrant server can be accessed through 192.168.33.10
+
 # About the setup script for LEMH stack
 
 I refer to this as my supermegaukulele server. It's the fastest setup I know of so far.
