@@ -1,6 +1,10 @@
 # Vagrant version of my Super Mega Ukulele Server
 
-To start just git  clone and vagrant up.
+To start just:
+
+- git clone this repo
+- vagrant up
+- run mysql_secure_installation
 
 Useful info:
 
