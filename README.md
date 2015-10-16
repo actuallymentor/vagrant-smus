@@ -6,6 +6,7 @@ Useful info:
 
 - The vagrant server uses ubuntu 15.04
 - The vagrant server can be accessed through 192.168.33.10
+- The www folder (in repo) on the host is linked to the webroot of the vagrant server
 
 # About the setup script for LEMH stack
 
