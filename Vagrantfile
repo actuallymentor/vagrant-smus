@@ -14,8 +14,8 @@ Vagrant.configure(2) do |config|
     cpus = `nproc`.to_i
     mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's/ kB//'`.to_i / 1024 / 4
   else
-	cpus = 'wmic computersystem get NumberOfCores'.split("\n")[2].to_i
-	mem = 'wmic OS get TotalVisibleMemorySize'.split("\n")[2].to_i / 1024 / 4
+	cpus = `wmic computersystem get NumberOfCores`.split("\n")[2].to_i
+	mem = `wmic OS get TotalVisibleMemorySize`.split("\n")[2].to_i / 1024 / 4
   end
 
   v.customize ["modifyvm", :id, "--memory", mem]
