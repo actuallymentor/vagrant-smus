@@ -1,8 +1,17 @@
-# Vagrant version of my Super Mega Ukulele Server
+# Vagrant version of my Super Mega Ukulele Server with WordPress
+
+IMPORTANT: this server assumes an empty root passwod for MySQL
+
+Why this server?
+
+- Runs WordPress on LEMH/SMUS server
+- Export database into webroot on 'halt'
+- Imports databases on 'up' 
 
 To start just:
 
 - git clone this repo
+- vagrant plugin install vagrant-triggers
 - vagrant up
 - run mysql_secure_installation
 

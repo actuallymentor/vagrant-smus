@@ -22,4 +22,14 @@ Vagrant.configure(2) do |config|
   v.customize ["modifyvm", :id, "--cpus", cpus]
 end
 
+  # Export databases
+  config.trigger.after :halt do
+    run "cd /usr/local/nginx/html/; mysqldump -u root --all-databases > alldb.sql;"
+  end
+
+  # Import databases
+  config.trigger.after :up do
+    run "cd /usr/local/nginx/html/; mysql -u root < alldb.sql"
+  end
+
 end
